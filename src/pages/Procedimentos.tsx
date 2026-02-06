@@ -5,13 +5,13 @@ import ProcedimentoCard from "@/components/ProcedimentoCard";
 
 // Images
 import card1Image from "@/assets/procedimentos/card-1-dra-livia.jpeg";
-import card2Image from "@/assets/procedimentos/card-2-botox.jpeg";
-import card3Image from "@/assets/procedimentos/card-3-limpeza.jpeg";
-import card4Image from "@/assets/procedimentos/card-4-preenchimento.jpeg";
-import card5Image from "@/assets/procedimentos/card-5-bioestimulador.jpeg";
-import card6Image from "@/assets/procedimentos/card-6-skinbooster.jpeg";
-import card7Image from "@/assets/procedimentos/card-7-microagulhamento.jpeg";
-import card8Image from "@/assets/procedimentos/card-8-info.jpeg";
+import card8Image from "@/assets/procedimentos/card-2-botox.jpeg";
+import card2Image from "@/assets/procedimentos/card-3-limpeza.jpeg"; // botox
+import card3Image from "@/assets/procedimentos/card-4-preenchimento.jpeg";
+import card4Image from "@/assets/procedimentos/card-5-bioestimulador.jpeg";
+import card5Image from "@/assets/procedimentos/card-6-skinbooster.jpeg";
+import card6Image from "@/assets/procedimentos/card-7-microagulhamento.jpeg";
+import card7Image from "@/assets/procedimentos/card-8-info.jpeg";
 
 const Procedimentos = () => {
   const scrollToTop = () => {

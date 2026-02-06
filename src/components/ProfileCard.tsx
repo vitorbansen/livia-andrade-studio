@@ -48,7 +48,7 @@ const ProfileCard = () => {
     {
       label: "Contato via WhatsApp",
       icon: MessageCircle,
-      href: "https://wa.me/5500000000000",
+      href: "https://wa.me/5547996372918?text=Oi%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos",
       variant: "outline" as const,
     },
   ];

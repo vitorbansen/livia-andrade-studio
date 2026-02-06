@@ -24,14 +24,14 @@ const ProcedimentoCard = ({
   return (
     <div className="min-w-0 flex-[0_0_85%] md:flex-[0_0_70%] lg:flex-[0_0_50%] px-3">
       <motion.div
-        className="bg-card rounded-3xl shadow-card overflow-hidden h-full"
+        className="bg-card rounded-3xl shadow-card overflow-hidden h-full flex flex-col"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        {/* Image - Smaller */}
-        <div className="relative w-full h-48 md:h-56 overflow-hidden">
+        {/* Image - Retangular */}
+        <div className="relative w-full aspect-[3/2] overflow-hidden flex-shrink-0">
           <img
             src={image}
             alt={title}
@@ -41,7 +41,7 @@ const ProcedimentoCard = ({
         </div>
 
         {/* Content */}
-        <div className="p-5 md:p-6">
+        <div className="p-5 md:p-6 flex flex-col flex-1">
           {isIntro && (
             <p className="text-primary font-body text-xs uppercase tracking-widest mb-1">
               Olá
@@ -78,7 +78,7 @@ const ProcedimentoCard = ({
 
           {/* Price */}
           {price && (
-            <div className="mt-4 pt-4 border-t border-border/50">
+            <div className="mt-auto pt-4 border-t border-border/50">
               <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-1">
                 Investimento
               </p>

@@ -18,6 +18,17 @@ const Procedimentos = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Wrapper para adicionar sombreamento moderno aos cards
+  const EnhancedCard = ({ children }: { children: React.ReactNode }) => (
+    <div className="px-4 py-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="shadow-[0_20px_50px_rgba(0,0,0,0.12)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.35)] rounded-3xl overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.45)] transition-shadow duration-300">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-background">
       {/* Fixed Back Button */}
@@ -37,75 +48,163 @@ const Procedimentos = () => {
       </motion.div>
 
       {/* Card 1 - Apresentação */}
-      <ProcedimentoCard
-        image={card1Image}
-        title="Sou a Dra. Lívia"
-        description="Sou Biomédica Esteta, com formação complementar e cursos especializados para aperfeiçoamento de técnicas em procedimentos estéticos faciais, sempre prezando pela naturalidade, segurança e bem-estar dos meus pacientes. Meu atendimento é totalmente personalizado, baseado em avaliação individual, respeitando as características e expectativas de cada paciente."
-        isIntro
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card1Image}
+          title="Sou a Dra. Lívia"
+          description="Sou Biomédica Esteta, com formação complementar e cursos especializados para aperfeiçoamento de técnicas em procedimentos estéticos faciais, sempre prezando pela naturalidade, segurança e bem-estar dos meus pacientes. Meu atendimento é totalmente personalizado, baseado em avaliação individual, respeitando as características e expectativas de cada paciente."
+          isIntro
+        />
+      </EnhancedCard>
 
       {/* Card 2 - Botox */}
-      <ProcedimentoCard
-        image={card2Image}
-        title="Botox"
-        description="A toxina botulínica, popularmente conhecida como Botox, é um procedimento estético minimamente invasivo utilizado para suavizar rugas e linhas de expressão, além de prevenir o envelhecimento precoce da pele. O tratamento age relaxando temporariamente a musculatura responsável pela formação das marcas, proporcionando um aspecto mais leve, descansado e natural ao rosto. Os resultados costumam iniciar entre 3 a 7 dias após a aplicação, com duração média de 3 a 6 meses, podendo variar conforme a resposta individual de cada paciente."
-        price="R$ 750 (feminino) | R$ 850 (masculino) - Din/Pix"
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card2Image}
+          title="Botox"
+          description="A toxina botulínica, popularmente conhecida como Botox, é um procedimento estético minimamente invasivo utilizado para suavizar rugas e linhas de expressão, além de prevenir o envelhecimento precoce da pele. O tratamento age relaxando temporariamente a musculatura responsável pela formação das marcas, proporcionando um aspecto mais leve, descansado e natural ao rosto. Os resultados costumam iniciar entre 3 a 7 dias após a aplicação, com duração média de 3 a 6 meses, podendo variar conforme a resposta individual de cada paciente."
+        />
+      </EnhancedCard>
 
       {/* Card 3 - Limpeza de Pele */}
-      <ProcedimentoCard
-        image={card3Image}
-        title="Limpeza de Pele"
-        description="A limpeza de pele é um procedimento estético que tem como objetivo remover impurezas, células mortas, cravos e o excesso de oleosidade, promovendo a renovação e saúde da pele. O tratamento auxilia na prevenção da acne, melhora a textura cutânea e potencializa a absorção de ativos utilizados nos cuidados diários. O procedimento é realizado de forma personalizada, respeitando as necessidades de cada tipo de pele, proporcionando aspecto mais limpo, hidratado e revitalizado."
-        price="R$ 200 - Din/Pix"
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card3Image}
+          title="Limpeza de Pele"
+          description="A limpeza de pele é um procedimento estético que tem como objetivo remover impurezas, células mortas, cravos e o excesso de oleosidade, promovendo a renovação e saúde da pele. O tratamento auxilia na prevenção da acne, melhora a textura cutânea e potencializa a absorção de ativos utilizados nos cuidados diários. O procedimento é realizado de forma personalizada, respeitando as necessidades de cada tipo de pele, proporcionando aspecto mais limpo, hidratado e revitalizado."
+        />
+      </EnhancedCard>
 
       {/* Card 4 - Preenchimento */}
-      <ProcedimentoCard
-        image={card4Image}
-        title="Preenchimento"
-        description="O preenchimento facial é um procedimento estético minimamente invasivo realizado, na maioria das vezes, com ácido hialurônico, substância biocompatível e naturalmente presente no organismo. Ele é indicado para restaurar volume, melhorar contornos faciais, suavizar sulcos e rugas, além de promover maior harmonização e rejuvenescimento da face. O tratamento apresenta resultados imediatos, com aspecto natural e seguro quando realizado por profissional habilitado. A durabilidade varia conforme a região tratada, o produto utilizado e as características individuais de cada paciente."
-        price="R$ 550 - Din/Pix"
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card4Image}
+          title="Preenchimento"
+          description="O preenchimento facial é um procedimento estético minimamente invasivo realizado, na maioria das vezes, com ácido hialurônico, substância biocompatível e naturalmente presente no organismo. Ele é indicado para restaurar volume, melhorar contornos faciais, suavizar sulcos e rugas, além de promover maior harmonização e rejuvenescimento da face. O tratamento apresenta resultados imediatos, com aspecto natural e seguro quando realizado por profissional habilitado. A durabilidade varia conforme a região tratada, o produto utilizado e as características individuais de cada paciente."
+        />
+      </EnhancedCard>
 
       {/* Card 5 - Bioestimulador */}
-      <ProcedimentoCard
-        image={card5Image}
-        title="Bioestimulador"
-        subtitle="de Colágeno"
-        description="O bioestimulador de colágeno é um procedimento estético injetável que estimula o organismo a produzir colágeno de forma natural, promovendo melhora progressiva da firmeza, elasticidade e qualidade da pele. Ele é indicado para tratar a flacidez, melhorar o contorno facial e corporal, além de contribuir para um aspecto mais jovem e saudável da pele. Os resultados surgem gradualmente, tornando o rejuvenescimento natural e duradouro. O tratamento é seguro quando realizado por profissional habilitado, sendo personalizado conforme as necessidades de cada paciente."
-        price="A partir de R$ 890 - Din/Pix"
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card5Image}
+          title="Bioestimulador"
+          subtitle="de Colágeno"
+          description="O bioestimulador de colágeno é um procedimento estético injetável que estimula o organismo a produzir colágeno de forma natural, promovendo melhora progressiva da firmeza, elasticidade e qualidade da pele. Ele é indicado para tratar a flacidez, melhorar o contorno facial e corporal, além de contribuir para um aspecto mais jovem e saudável da pele. Os resultados surgem gradualmente, tornando o rejuvenescimento natural e duradouro. O tratamento é seguro quando realizado por profissional habilitado, sendo personalizado conforme as necessidades de cada paciente."
+        />
+      </EnhancedCard>
 
       {/* Card 6 - Skinbooster */}
-      <ProcedimentoCard
-        image={card6Image}
-        title="Skinbooster"
-        description="O Skinbooster é um procedimento estético injetável realizado com ácido hialurônico, indicado para promover hidratação profunda, melhorar a textura, elasticidade e luminosidade da pele. Diferente do preenchimento, o Skinbooster não tem como objetivo dar volume, mas sim revitalizar a pele de dentro para fora. O tratamento é indicado para prevenir e tratar sinais de envelhecimento, melhorar linhas finas e devolver o viço natural da pele. Os resultados são progressivos, proporcionando aspecto mais saudável, hidratado e rejuvenescido. O protocolo é personalizado conforme as necessidades de cada paciente."
-        price="R$ 250 - Din/Pix"
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card6Image}
+          title="Skinbooster"
+          description="O Skinbooster é um procedimento estético injetável realizado com ácido hialurônico, indicado para promover hidratação profunda, melhorar a textura, elasticidade e luminosidade da pele. Diferente do preenchimento, o Skinbooster não tem como objetivo dar volume, mas sim revitalizar a pele de dentro para fora. O tratamento é indicado para prevenir e tratar sinais de envelhecimento, melhorar linhas finas e devolver o viço natural da pele. Os resultados são progressivos, proporcionando aspecto mais saudável, hidratado e rejuvenescido. O protocolo é personalizado conforme as necessidades de cada paciente."
+        />
+      </EnhancedCard>
 
       {/* Card 7 - Microagulhamento */}
-      <ProcedimentoCard
-        image={card7Image}
-        title="Microagulhamento"
-        description="O microagulhamento é um procedimento estético minimamente invasivo que utiliza microagulhas para estimular a produção natural de colágeno e elastina, promovendo renovação celular e melhora da qualidade da pele. O tratamento é indicado para suavizar cicatrizes de acne, linhas finas, manchas, poros dilatados e flacidez, além de melhorar a textura e uniformidade da pele. Também favorece a absorção de ativos aplicados durante o procedimento, potencializando os resultados. Os resultados são progressivos e o protocolo é personalizado conforme as necessidades e objetivos de cada paciente."
-        price="A partir de R$ 150 - Din/Pix"
-      />
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card7Image}
+          title="Microagulhamento"
+          description="O microagulhamento é um procedimento estético minimamente invasivo que utiliza microagulhas para estimular a produção natural de colágeno e elastina, promovendo renovação celular e melhora da qualidade da pele. O tratamento é indicado para suavizar cicatrizes de acne, linhas finas, manchas, poros dilatados e flacidez, além de melhorar a textura e uniformidade da pele. Também favorece a absorção de ativos aplicados durante o procedimento, potencializando os resultados. Os resultados são progressivos e o protocolo é personalizado conforme as necessidades e objetivos de cada paciente."
+        />
+      </EnhancedCard>
 
-      {/* Card 8 - Informações Importantes */}
-      <ProcedimentoCard
-        image={card8Image}
-        title="Informações"
-        subtitle="Importantes"
-        description=""
-        isInfo
-        infoItems={[
-          "Todos os procedimentos são realizados mediante avaliação profissional.",
-          "Os resultados podem variar conforme características individuais.",
-          "Pode ser necessário mais de uma sessão para atingir o resultado desejado.",
-        ]}
-      />
+      {/* Card 9 - Informações Importantes */}
+      <EnhancedCard>
+        <ProcedimentoCard
+          image={card8Image}
+          title="Informações"
+          subtitle="Importantes"
+          description=""
+          isInfo
+          infoItems={[
+            "Todos os procedimentos são realizados mediante avaliação profissional.",
+            "Os resultados podem variar conforme características individuais.",
+            "Pode ser necessário mais de uma sessão para atingir o resultado desejado.",
+          ]}
+        />
+      </EnhancedCard>
+
+            {/* Card 8 - Investimentos */}
+      <motion.section
+        className="py-16 px-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-card rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden border border-border/50">
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src={card8Image}
+                alt="Investimentos"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent" />
+            </div>
+            
+            <div className="p-8 md:p-12 text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
+                Investimentos
+              </h2>
+              
+              <div className="space-y-6 max-w-2xl mx-auto">
+                <div className="bg-muted/30 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-shadow">
+                  <h3 className="font-body text-lg md:text-xl font-semibold text-foreground mb-2">
+                    Bioestimulador de Colágeno
+                  </h3>
+                  <p className="text-muted-foreground font-body">A partir de R$ 850,00</p>
+                </div>
+                
+                <div className="bg-muted/30 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-shadow">
+                  <h3 className="font-body text-lg md:text-xl font-semibold text-foreground mb-2">
+                    Skinbooster
+                  </h3>
+                  <p className="text-muted-foreground font-body">A partir de R$ 250,00</p>
+                </div>
+                
+                <div className="bg-muted/30 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-shadow">
+                  <h3 className="font-body text-lg md:text-xl font-semibold text-foreground mb-2">
+                    Microagulhamento
+                  </h3>
+                  <p className="text-muted-foreground font-body">A partir de R$ 150,00</p>
+                </div>
+                
+                <div className="bg-muted/30 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-shadow">
+                  <h3 className="font-body text-lg md:text-xl font-semibold text-foreground mb-2">
+                    Toxina Botulínica (Botox)
+                  </h3>
+                  <p className="text-muted-foreground font-body">
+                    Feminino: a partir de R$ 750,00
+                  </p>
+                  <p className="text-muted-foreground font-body">
+                    Masculino: a partir de R$ 850,00
+                  </p>
+                </div>
+                
+                <div className="bg-muted/30 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-shadow">
+                  <h3 className="font-body text-lg md:text-xl font-semibold text-foreground mb-2">
+                    Limpeza de Pele
+                  </h3>
+                  <p className="text-muted-foreground font-body">R$ 200,00</p>
+                </div>
+                
+                <div className="bg-muted/30 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-shadow">
+                  <h3 className="font-body text-lg md:text-xl font-semibold text-foreground mb-2">
+                    Preenchimento com Ácido Hialurônico
+                  </h3>
+                  <p className="text-muted-foreground font-body">R$ 550,00 por seringa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
 
       {/* CTA Section */}
       <motion.section

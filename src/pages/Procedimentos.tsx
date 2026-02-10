@@ -113,7 +113,7 @@ const Procedimentos = () => {
       </EnhancedCard>
 
       {/* Card 9 - Informações Importantes */}
-      <EnhancedCard>
+      {/* <EnhancedCard>
         <ProcedimentoCard
           image={card8Image}
           title="Informações"
@@ -126,7 +126,7 @@ const Procedimentos = () => {
             "Pode ser necessário mais de uma sessão para atingir o resultado desejado.",
           ]}
         />
-      </EnhancedCard>
+      </EnhancedCard> */}
 
             {/* Card 8 - Investimentos */}
       <motion.section

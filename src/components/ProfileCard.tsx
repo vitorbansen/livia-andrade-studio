@@ -33,17 +33,17 @@ const ProfileCard = () => {
   };
 
   const buttons = [
-    {
-      label: "Agendar Atendimento",
-      icon: Calendar,
-      href: "#agendar",
-      variant: "primary" as const,
-    },
+    // {
+    //   label: "Agendar Atendimento",
+    //   icon: Calendar,
+    //   href: "#agendar",
+    //   variant: "primary" as const,
+    // },
     {
       label: "Procedimentos",
       icon: Sparkles,
       href: "/procedimentos",
-      variant: "outline" as const,
+      variant: "primary" as const,
     },
     {
       label: "Contato via WhatsApp",
